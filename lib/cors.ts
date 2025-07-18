@@ -18,3 +18,5 @@ export function handleCors(req: NextRequest) {
   res.headers.set("Access-Control-Allow-Credentials", "true");
   return res;
 }
+
+//parves

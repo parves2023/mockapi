@@ -34,8 +34,8 @@ export default function RegisterPage() {
         body: JSON.stringify({ name, email, password }),
       })
 
+      console.log(email,password,name)
       const data = await response.json()
-
       if (response.ok) {
         router.push("/dashboard")
       } else {

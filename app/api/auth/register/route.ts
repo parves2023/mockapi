@@ -9,6 +9,7 @@ export async function POST(request: NextRequest) {
 
     const { email, password, name } = await request.json()
 
+
     // Check if user already exists
     const existingUser = await User.findOne({ email })
     if (existingUser) {
