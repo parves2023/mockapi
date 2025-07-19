@@ -9,6 +9,12 @@ export async function POST(request: NextRequest) {
 
     const { email, password, name } = await request.json()
 
+    console.log(email, name, password)
+
+    // Attempt to drop the old 'username' index (only once needed)
+    await User.collection.dropIndex("username_1").catch((err) => {
+      console.log("Index not found or already removed:", err.message);
+    })
 
     // Check if user already exists
     const existingUser = await User.findOne({ email })
@@ -23,6 +29,7 @@ export async function POST(request: NextRequest) {
       password: hashedPassword,
       name,
     })
+
 
     // Generate JWT token
     const token = generateToken(user._id.toString())
