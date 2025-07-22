@@ -1,30 +1,89 @@
-# Mock-api-clone
+# 🚀 Mock API Clone
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A lightweight, self-hosted version of MockAPI for quickly creating RESTful API endpoints. Ideal for prototyping, frontend development, and testing — without writing any backend code.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/anamul-hauqes-projects/v0-mock-api-clone)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/Nh4Pfe4PWBY)
+🌐 **Live Link**: [mock-api-easyserver.vercel.app](https://mock-api-easyserver.vercel.app/)
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 📸 Features
 
-## Deployment
+* 🔐 User authentication with JWT
+* 📁 Project and Collection management
+* 📦 CRUD endpoints auto-generated for your data
+* 💾 MongoDB integration
+* ✨ Fully responsive UI
+* ⚡ Built with **Next.js**, **MongoDB**, and **TailwindCSS**
 
-Your project is live at:
+---
 
-**[https://vercel.com/anamul-hauqes-projects/v0-mock-api-clone](https://vercel.com/anamul-hauqes-projects/v0-mock-api-clone)**
+## ⚙️ Getting Started
 
-## Build your app
+### 1. Clone the Repository
 
-Continue building your app on:
+```bash
+git clone https://github.com/parves2023/mockapi
+cd mockapi
+```
 
-**[https://v0.dev/chat/projects/Nh4Pfe4PWBY](https://v0.dev/chat/projects/Nh4Pfe4PWBY)**
+### 2. Environment Setup
 
-## How It Works
+Create a `.env.local` file in the root of the project and add the following:
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_jwt_key
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Run Locally
+
+```bash
+npm run dev
+```
+
+Server will run at [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧪 How to Use
+
+1. Visit the live site: [mock-api-easyserver.vercel.app](https://mock-api-easyserver.vercel.app/)
+2. Create an account and log in.
+3. Create a new **Project**.
+4. Add **Collections** to your project with a custom schema.
+5. Instantly use RESTful API endpoints like:
+
+```bash
+GET    /api/{projectId}/{collection}
+POST   /api/{projectId}/{collection}
+PUT    /api/{projectId}/{collection}/{id}
+DELETE /api/{projectId}/{collection}/{id}
+```
+
+---
+
+## 🛠 Tech Stack
+
+* **Frontend**: Next.js, TypeScript, TailwindCSS
+* **Backend**: Next.js API Routes, MongoDB, Mongoose
+* **Auth**: JWT-based authentication
+* **Deployment**: Vercel
+
+---
+
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Let me know if you'd like a badge section or want to deploy instructions for Docker or Netlify too.
